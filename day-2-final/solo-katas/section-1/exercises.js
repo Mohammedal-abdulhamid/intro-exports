@@ -70,7 +70,7 @@ skipTest("get the slice of an array", function () {
 
 // Exercise 5
 // once you have passed the test above, change skipTest below to runTest so you are able to run the next test
-runTest("Task 5", function () {
+skipTest("Task 5", function () {
   const myObject = {};
 
   check(FILL_ME_IN).isEqualTo(typeof myObject);

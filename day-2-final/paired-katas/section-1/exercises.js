@@ -1,4 +1,4 @@
-const { check, skipTest, skipTest } = require("../../test-api");
+const { check, skipTest, runTest } = require("../../test-api");
 
 /*
 Instructions
