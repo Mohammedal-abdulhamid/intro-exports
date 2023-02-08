@@ -1,12 +1,11 @@
-const { check, runTest, skipTest } = require("../../test-api/index.js");
+const { check, runTest } = require("../../test-api/index.js");
 
 /* 
-
 If we list all the whole numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
 
 The sum of these multiples is 23.
 
-Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the limit (number) passed in as an argument.
+Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the limit passed in as an argument.
 
 Additionally, if the number is negative, return 0.
 
