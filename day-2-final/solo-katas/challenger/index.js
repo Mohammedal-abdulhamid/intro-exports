@@ -22,7 +22,7 @@ runTest("findTotalOfMultiples() return zero for negative numbers", function () {
 runTest("findTotalOfMultiples() returns first multiple of 3", function () {
   check(findTotalOfMultiples(4)).isEqualTo(3);
 });
-runTest("findTotalOfMultiples() returns multiples of three and 5 added together below limit ", function () {
+runTest("findTotalOfMultiples() returns sum of multiples of 3 or 5  below limit ", function () {
   check(findTotalOfMultiples(6)).isEqualTo(8);
   check(findTotalOfMultiples(10)).isEqualTo(23);
 });
