@@ -17,7 +17,7 @@ function checkRightAngledTriangle(triangleAngles) {
   // remember to require in at least 1 util function help you solve this problem!
 }
 
-runTest("isRightAngledTriangle() should return appropriate string message", function () {
+runTest("checkRightAngledTriangle() should return appropriate string message", function () {
   check(checkRightAngledTriangle({ sideA: 3, sideB: 4, sideC: 5 })).isEqualTo("This is a right angled triangle");
   check(checkRightAngledTriangle({ sideA: 6, sideB: 8, sideC: 10 })).isEqualTo("This is a right angled triangle");
   check(checkRightAngledTriangle({ sideA: 1, sideB: 2, sideC: 3 })).isEqualTo("This is a normal triangle");

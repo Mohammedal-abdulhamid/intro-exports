@@ -10,7 +10,7 @@ Should then print a string which includes the total
     returns 'The array has a total of 6'
  */
 
-function printTotal(arr) {
+function printArrayTotal(arr) {
   // remember to require in at least 1 util function help you solve this problem!
 }
 

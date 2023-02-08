@@ -13,7 +13,7 @@ HINT: You will need to export multiple functions from the same file
  */
 
 function isTotalEven(num1, num2) {
-  // remember to require in at least 2 util functions help you solve this problem!
+  // remember to use 2 util functions to complete this task
 }
 
 runTest("isTotalEven() should return appropriate boolean for total ", function () {
