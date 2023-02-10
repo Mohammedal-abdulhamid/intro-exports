@@ -42,12 +42,12 @@ The tasks are listed 0 - 5
 
 For each task, there is a `utils` function that has been created which will help you complete the challenge. These can be located in the `utils` folder.
 
-You will need to export and then require in the correct `utils` function to help you complete the task.
+You will need to **export** and then **require** in the correct `utils` function to help you complete the task.
 
 You should not need to change any of the code written for the utils functions themselves - unless specified.
 
 You may need multiple `utils` functions to complete a single task.
 
-## Refactor
+## Refactor - Advanced
 
 Where appropriate, try refactor any challenge in this section to use object destructuring
