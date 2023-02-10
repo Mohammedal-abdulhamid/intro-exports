@@ -8,6 +8,7 @@ Run this file with Node to run the tests and check your function works correctly
 Take a look at the tests to see what each function should be returning given various arguments.
 When you're ready to move on to the next function replace skipTest with runTest.
 */
+
 // Exercise 1
 function isBiggerThan10(num) {
   // This function should take a number as an argument, and return an appropriate message based on that number's relationship to the number 10

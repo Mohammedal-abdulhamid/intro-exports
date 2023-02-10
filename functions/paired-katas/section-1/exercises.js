@@ -8,6 +8,7 @@ Run this file with Node to run the tests and check your function works correctly
 Take a look at the tests to see what each function should be returning given various arguments.
 When you're ready to move on to the next function replace skipTest with skipTest.
 */
+
 //Exercise 1
 function countProperties(obj) {
   // This function should take an object as its argument and return the total number of properties it contains
