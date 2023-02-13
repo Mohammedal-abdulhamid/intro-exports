@@ -1,4 +1,4 @@
-const { check, skipTest, runTest } = require("../../test-api");
+const { check, skipTest, runTest } = require("../../../test-api/index.js");
 
 /*
 Instructions
@@ -32,27 +32,32 @@ skipTest("isEmptyArray() checks if an array is empty", function () {
 });
 
 //Exercise 3
-function createUserString(user) {
+function createProfileDescription(person) {
   /*
-  This function should take an object representing a user's details as its argument
+  This function should take an object representing a person and information about whether they like to code
+
   A user object will take this form:
   {
     name: "Mitch",
-    age: 30,
-    language: "JavaScript"
+    likesToCode: true
   }
-  You should return a string consisting of these details in this form:
-  "name: Mitch, age: 27, language: Javascript"
+
+  If the 'likesToCode' property is true, then you should return a string of the form 
+    "My name is Mitch and I like to code."
+
+  If the 'likesToCode' property is false, the string should look like
+    "My name is Mitch and I don't like to code."
+  
   This is a good use case for String Template Literals:
   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
   */
 }
 
-skipTest("createUserString() will create a message from an details object", function () {
-  check(createUserString({ name: "Mitch", age: 30, language: "Javascript" })).isEqualTo(
-    "name: Mitch, age: 30, language: Javascript"
+skipTest("createProfileDescription() will create a sentence about a whether a person likes to code or not", function () {
+  check(createProfileDescription({ name: "Mitch", likesToCode: true })).isEqualTo(
+    "My name is Mitch and I like to code."
   );
-  check(createUserString({ name: "Anat", age: 24, language: "Ruby" })).isEqualTo("name: Anat, age: 24, language: Ruby");
+  check(createProfileDescription({ name: "Lisa", likesToCode: false })).isEqualTo("My name is Lisa and I don't like to code.");
 });
 
 //Exercise 4

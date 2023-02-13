@@ -1,4 +1,4 @@
-const { check, runTest, skipTest } = require("../../../test-api");
+const { check, runTest, skipTest } = require("../../../test-api/index.js");
 
 /*
 Instructions
@@ -100,22 +100,27 @@ skipTest("checkBatteryLevel() should return a message with info about the batter
 });
 
 //Question 7
-function deleteManyPasswords(arr) {
+function makeAllAdmins(arr) {
   /*
   This function should take an array of 'user' objects as an argument
-  Each user will be an object with a 'name' and 'password' property
-  You should return an array of user objects each with the 'password' property removed (retaining the order)
+  Each user will be an object with a 'name' and 'admin' property
+  The 'admin' property will be a boolean value
+  You should return an array of user objects each with the 'admin' property set to true
   */
 }
 
-skipTest("deleteManyPasswords() deletes the password property for each user", function () {
+skipTest("makeAllAdmins() updates the admin property for each user", function () {
   check(
-    deleteManyPasswords([
-      { name: "Barry", password: "ilovetea" },
-      { name: "Sandeep", password: "ilovecoffee" },
-      { name: "Kavita", password: "ilovepie" },
+    makeAllAdmins([
+      { name: "Barry", admin: false },
+      { name: "Sandeep", admin: true },
+      { name: "Kavita", admin: false },
     ])
-  ).isEqualTo([{ name: "Barry" }, { name: "Sandeep" }, { name: "Kavita" }]);
+  ).isEqualTo([
+    { name: "Barry", admin: true },
+    { name: "Sandeep", admin: true },
+    { name: "Kavita", admin: true },
+  ]);
 });
 
 //Question 8

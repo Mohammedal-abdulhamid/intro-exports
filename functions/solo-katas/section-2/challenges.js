@@ -1,4 +1,4 @@
-const { check, runTest, skipTest } = require("../../../test-api");
+const { check, runTest, skipTest } = require("../../../test-api/index.js");
 
 /*
 Instructions
@@ -42,14 +42,14 @@ skipTest("createObject() creates a new object from a key value pair", function (
 });
 
 // Exercise 4
-function getLastNItems(arr, n) {
-  // This function should take two arguments, an array and a number n, and return a new array containing the last n items of the given array
+function getFirstNItems(arr, n) {
+  // This function should take two arguments, an array and a number n, and return a new array containing the first n items of the given array
 }
 
-skipTest("getLastNItems() returns the last n items in an array", function () {
-  check(getLastNItems(["a", "b", "c", "d"], 2)).isEqualTo(["c", "d"]);
-  check(getLastNItems(["apple", "banana", "pear", "kiwi"], 0)).isEqualTo([]);
-  check(getLastNItems(["apple", "banana", "pear", "kiwi"], 3)).isEqualTo(["banana", "pear", "kiwi"]);
+skipTest("getFirstNItems() returns the first n items in an array", function () {
+  check(getFirstNItems(["a", "b", "c", "d"], 2)).isEqualTo(["a", "b"]);
+  check(getFirstNItems(["apple", "banana", "pear", "kiwi"], 0)).isEqualTo([]);
+  check(getFirstNItems(["apple", "banana", "pear", "kiwi"], 3)).isEqualTo(["apple", "banana", "pear"]);
 });
 
 // Exercise 5
@@ -66,57 +66,83 @@ skipTest("createArrow() will return an arrow pointing in the right direction", f
 });
 
 // Exercise 6
-function removeItem(arr, n) {
-  // This function should take two arguments, an array and a number n, and return a new array without the item at index 'n'
+function moveItemToEnd(arr, n) {
+  // This function should take two arguments, an array and a number n, and return a new array where the item that was previously at index 'n' is now at the end of the array 
 }
 
-skipTest("removeItem() removes an item at a given index", function () {
-  check(removeItem(["a", "b", "c", "d"], 2)).isEqualTo(["a", "b", "d"]);
-  check(removeItem(["a", "b", "c", "d"], 0)).isEqualTo(["b", "c", "d"]);
-  check(removeItem(["a", "b", "c", "d"], 1)).isEqualTo(["a", "c", "d"]);
+skipTest("moveItemToEnd() removes an item at a given index", function () {
+  check(moveItemToEnd(["a", "b", "c", "d"], 0)).isEqualTo(["b", "c", "d", "a"]);
+  check(moveItemToEnd(["a", "b", "c", "d"], 2)).isEqualTo(["a", "b", "d", "c"]);
+  check(moveItemToEnd(["a", "b", "c", "d"], 1)).isEqualTo(["a", "c", "d", "b"]);
 });
 
 // Exercise 7
-function updateVoterAddress(voter, correctHouseNumber) {
+function updateUserAge(user) {
   /*
-  This function should take an object representing a voter's details and a house number as its arguments
-  A voter object will take this form:
+  The user of our website is having a birthday!
+
+  This function should take an object representing a user's account information
+
+  A user object will look
   {
-    name: "Alex",
-    age: 39,
-    address: {
-      houseNumber: 2,
-      street: "Old St",
-      city: "Chester"
+    admin: false,
+    username: "xoxoAlexoxo",
+    personalDetails: {
+      name: "Alex",
+      age: 39,
+      favFood: "gooseberry fool"
     }
   }
-  The voter's house number is incorrect and you should update it to be the one provided
-  This function does NOT need to return anything
+  The user's age should be increased by 1 to reflect their recent birthday
+
+  NOTE: This function does NOT need to return anything!
   */
 }
 
-skipTest("updateVoterAddress() updates the voter's houseNumber", function () {
-  const voter = {
-    name: "Alex",
-    age: 39,
-    address: {
-      houseNumber: 2,
-      street: "Old St",
-      city: "Chester",
-    },
+skipTest("updateUserAge() updates the user's age", function () {
+  const user1 = {
+    admin: false,
+    username: "xoxoAlexoxo",
+    personalDetails: {
+      name: "Alex",
+      age: 39,
+      favFood: "gooseberry fool"
+    }
   };
 
-  updateVoterAddress(voter, 10);
+  updateUserAge(user1);
 
-  check(voter).isEqualTo({
-    name: "Alex",
-    age: 39,
-    address: {
-      houseNumber: 10,
-      street: "Old St",
-      city: "Chester",
-    },
+  check(user1).isEqualTo({
+    admin: false,
+    username: "xoxoAlexoxo",
+    personalDetails: {
+      name: "Alex",
+      age: 40,
+      favFood: "gooseberry fool"
+    }
   });
+
+  const user2 = {
+    admin: true,
+    username: "brum4life",
+    personalDetails: {
+      name: "Poonam",
+      age: 19,
+      favFood: "caviar"
+    }
+  };
+
+  updateUserAge(user2);
+
+  check(user2).isEqualTo({
+    admin: true,
+    username: "brum4life",
+    personalDetails: {
+      name: "Poonam",
+      age: 20,
+      favFood: "caviar"
+    }
+  })
 });
 
 //Exercise 7
