@@ -1,4 +1,4 @@
-const { check, runTest, skipTest } = require("../../test-api");
+const { check, runTest, skipTest } = require("../../../test-api/index.js");
 
 /*
 Instructions
@@ -36,15 +36,15 @@ skipTest("multiply() can multiply 2 numbers together", function () {
 
 // Question 2
 /*
-squareRoot()
+roundDown()
 
-This function should take a single argument and return its square root
+This function should take a single argument and return its value rounded DOWN to the nearest integer
 */
 
-skipTest("squareRoot() returns the square root of a positive integer", function () {
-  check(squareRoot(100)).isEqualTo(10);
-  check(squareRoot(25)).isEqualTo(5);
-  check(squareRoot(121)).isEqualTo(11);
+skipTest("roundDown() returns the result of rounding down to the nearest integer", function () {
+  check(roundDown(100.1)).isEqualTo(100);
+  check(roundDown(25.5)).isEqualTo(25);
+  check(roundDown(121.999)).isEqualTo(121);
 });
 
 // Question 3
@@ -74,20 +74,20 @@ skipTest("capitaliseFirstLetter() capitalises the first letter in a string", fun
 
 // Question 5
 /*
-isFromThe60s()
+isInThe20thCentury()
 
-This function should take a number as an argument representing a year, and return true if that year is in the 1960s and false otherwise
+This function should take a number as an argument representing a year, and return true if that year is in the 20th century and false otherwise
 
 */
 
-skipTest("isFromThe60s() checks if a number is within 1960 to 1969 (inclusive)", function () {
-  check(isFromThe60s(1962)).isEqualTo(true);
-  check(isFromThe60s(1965)).isEqualTo(true);
-  check(isFromThe60s(1970)).isEqualTo(false);
-  check(isFromThe60s(1960)).isEqualTo(true);
-  check(isFromThe60s(1959)).isEqualTo(false);
-  check(isFromThe60s(1901)).isEqualTo(false);
-  check(isFromThe60s(1990)).isEqualTo(false);
+skipTest("isInThe20thCentury() checks if a number is within 1901 to 2000 (inclusive)", function () {
+  check(isInThe20thCentury(1962)).isEqualTo(true);
+  check(isInThe20thCentury(1901)).isEqualTo(true);
+  check(isInThe20thCentury(1900)).isEqualTo(false);
+  check(isInThe20thCentury(1913)).isEqualTo(true);
+  check(isInThe20thCentury(1876)).isEqualTo(false);
+  check(isInThe20thCentury(2001)).isEqualTo(false);
+  check(isInThe20thCentury(2000)).isEqualTo(true);
 });
 
 // Question 6
