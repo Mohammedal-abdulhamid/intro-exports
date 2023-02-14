@@ -107,24 +107,7 @@ skipTest("isAbsolutePath() checks if a file path is absolute or relative", funct
 });
 
 // Question 7
-/*
-getMiddle()
 
-This function should take a string as an argument and return the middle (or middle two) character(s) of that string
-
-*/
-
-skipTest("getMiddle() returns the middle character in a string of odd length", function () {
-  check(getMiddle("abc")).isEqualTo("b");
-  check(getMiddle("mitch")).isEqualTo("t");
-});
-
-skipTest("getMiddle() returns the middle characters in a string of even length", function () {
-  check(getMiddle("abcd")).isEqualTo("bc");
-  check(getMiddle("blob")).isEqualTo("lo");
-});
-
-// Question 8
 /*
 getCharCode()
 
@@ -147,6 +130,5 @@ skipTest("getCharCode() will return a message stating the ASCII code of a passed
 /************  Refactor Challenges *************
 
 1. Question 5 - complete this problem without resorting to if statements!
-2. Question 7 - use the ternary operator for this challenge (if you haven't already)
-3. Refactor every function into an ES6 arrow function () => {}
+2. Refactor every function into an ES6 arrow function () => {}
 */
