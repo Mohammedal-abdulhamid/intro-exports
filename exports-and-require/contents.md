@@ -29,7 +29,7 @@ Still running `index.js` with Node, attempt the following:
 
 ## Section 3
 
-Head through the `directories` 0-6 in the `challenges` directory. In each directory there will be a `source.js` and a `destination.js`, but you might have to do some digging to find them 🔎
+Head through the `directories` 0-8 in the `challenges` directory. In each directory there will be a `source.js` and a `destination.js`, but you might have to do some digging to find them 🔎
 
 One of these files will contain your instructions. A `destination.js` file should only `require` from a source file within its numbered directory.
 Eg. The destination file in `challenges/0` should _not_ `require` from a source file in `challenges/2`
