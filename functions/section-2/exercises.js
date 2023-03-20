@@ -1,4 +1,4 @@
-const { check, skipTest, runTest } = require("../../../test-api/index.js");
+const { check, skipTest, runTest } = require("../../test-api/index.js");
 
 /*
 Instructions
@@ -57,10 +57,30 @@ skipTest("createProfileDescription() will create a sentence about a whether a pe
   check(createProfileDescription({ name: "Mitch", likesToCode: true })).isEqualTo(
     "My name is Mitch and I like to code."
   );
-  check(createProfileDescription({ name: "Lisa", likesToCode: false })).isEqualTo("My name is Lisa and I don't like to code.");
+  check(createProfileDescription({ name: "Lisa", likesToCode: false })).isEqualTo(
+    "My name is Lisa and I don't like to code."
+  );
 });
 
-//Exercise 4
+// Exercise 4
+function readTrafficLight(lightColour) {
+  // This function should take a string representing a traffic light colour as an argument
+  // It will be one of "red", "green" or "amber" in either uppercase or lowercase
+  // You should return a corresponding message
+}
+
+skipTest("readTrafficLight() should print a message according to the different colour passed in", function () {
+  check(readTrafficLight("green")).isEqualTo("GO!");
+  check(readTrafficLight("GREEN")).isEqualTo("GO!");
+
+  check(readTrafficLight("amber")).isEqualTo("GET READY...");
+  check(readTrafficLight("AMBER")).isEqualTo("GET READY...");
+
+  check(readTrafficLight("red")).isEqualTo("STOP!");
+  check(readTrafficLight("RED")).isEqualTo("STOP!");
+});
+
+//Exercise 5
 function howManyArguments() {
   // This function should take any number of arguments and return the number of arguments passed into the function
   // HINT: For this one you should look up 'rest parameters' online - MDN Web Docs and devdocs are excellent sources of JavaScript documentation
@@ -73,7 +93,7 @@ skipTest("howManyArguments() returns the number of items passed on a single call
   check(howManyArguments("the", "meaning", "of", "life", "is", 42)).isEqualTo(6);
 });
 
-//Exercise 5
+//Exercise 6
 function updateCoinMachine(coinMachine, coin) {
   /*
   This function should take an object representing a coin machine and a string representing a coin as its arguments
@@ -138,7 +158,41 @@ skipTest("updatePosition() updates a co-ordinates array", function () {
   check(updatePosition([7, 50], "right")).isEqualTo([8, 50]);
 });
 
-//Exercise 8
+// Exercise 8
+function isFalsy(value) {
+  // This function should take any value as an argument, and return true if it is falsy, and false otherwise
+}
+
+skipTest("isFalsy() returns true if a value is falsy and false if it is truthy", function () {
+  check(isFalsy(false)).isEqualTo(true);
+  check(isFalsy("")).isEqualTo(true);
+  check(isFalsy(0)).isEqualTo(true);
+  check(isFalsy(NaN)).isEqualTo(true);
+  check(isFalsy(undefined)).isEqualTo(true);
+  check(isFalsy(null)).isEqualTo(true);
+  check(isFalsy(true)).isEqualTo(false);
+});
+
+
+// Exercise 9
+function checkGame(diceRoll, coinToss) {
+  // This function should take a number representing a dice roll and a string repesenting a coin toss as its arguments
+  // A dice roll will be a number between 1 and 6
+  // A coin toss will be "H" or "T" representing heads or tails
+  // The game is considered to be won if the dice roll is 3 or higher AND the coin toss is "H"
+  // You should return true if the game has been won, and false otherwise
+}
+
+skipTest("checkGame() should check if a user was won the game", function () {
+  check(checkGame(3, "H")).isEqualTo(true);
+  check(checkGame(4, "H")).isEqualTo(true);
+  check(checkGame(5, "H")).isEqualTo(true);
+  check(checkGame(6, "H")).isEqualTo(true);
+  check(checkGame(6, "T")).isEqualTo(false);
+});
+
+
+//Exercise 10
 function addCoins(collection, coin) {
   /*
   In this function, a "coin collection" is represented by an array containing 4 other nested arrays, each representing a slot in the collection in the following way:
