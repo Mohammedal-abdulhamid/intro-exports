@@ -2,11 +2,11 @@
 
 ## How to use this repo
 
-Each main directory is separated into individual sections.
+Each main directory is separated into individual sections. Make sure to **read the `contents.md` file** to understand how to complete the challenges.
 
-Work through these in order, running the file name with `node` after each solution.
+At each stage, run the code in the file using `node` by typing the following into the terminal:
 
-`node fileName.js`
+`node path/to/correct/file.js`
 
 Tests to check your solutions with are written for each question.
 
