@@ -14,7 +14,7 @@ function checkIfPropertyExists(obj, key) {
   // This function should take an object and a key as its arguments and return true if the input object contains the provided key and false otherwise
 }
 
-skipTest(
+runTest(
   "checkIfPropertyExists() checks if a property exists inside an object",
   function () {
     check(checkIfPropertyExists({ name: "jonny", age: 32 }, "name")).isEqualTo(

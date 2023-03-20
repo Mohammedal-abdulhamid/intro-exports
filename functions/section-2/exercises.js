@@ -14,11 +14,16 @@ function countProperties(obj) {
   // This function should take an object as its argument and return the total number of properties it contains
 }
 
-skipTest("countProperties() counts the number of key-value pairs for a given object", function () {
-  check(countProperties({})).isEqualTo(0);
-  check(countProperties({ name: "shaq" })).isEqualTo(1);
-  check(countProperties({ name: "shaq", job: "tutor", city: "Manchester" })).isEqualTo(3);
-});
+runTest(
+  "countProperties() counts the number of key-value pairs for a given object",
+  function () {
+    check(countProperties({})).isEqualTo(0);
+    check(countProperties({ name: "shaq" })).isEqualTo(1);
+    check(
+      countProperties({ name: "shaq", job: "tutor", city: "Manchester" })
+    ).isEqualTo(3);
+  }
+);
 
 //Exercise 2
 function isEmptyArray(arr) {
@@ -53,14 +58,17 @@ function createProfileDescription(person) {
   */
 }
 
-skipTest("createProfileDescription() will create a sentence about a whether a person likes to code or not", function () {
-  check(createProfileDescription({ name: "Mitch", likesToCode: true })).isEqualTo(
-    "My name is Mitch and I like to code."
-  );
-  check(createProfileDescription({ name: "Lisa", likesToCode: false })).isEqualTo(
-    "My name is Lisa and I don't like to code."
-  );
-});
+skipTest(
+  "createProfileDescription() will create a sentence about a whether a person likes to code or not",
+  function () {
+    check(
+      createProfileDescription({ name: "Mitch", likesToCode: true })
+    ).isEqualTo("My name is Mitch and I like to code.");
+    check(
+      createProfileDescription({ name: "Lisa", likesToCode: false })
+    ).isEqualTo("My name is Lisa and I don't like to code.");
+  }
+);
 
 // Exercise 4
 function readTrafficLight(lightColour) {
@@ -69,16 +77,19 @@ function readTrafficLight(lightColour) {
   // You should return a corresponding message
 }
 
-skipTest("readTrafficLight() should print a message according to the different colour passed in", function () {
-  check(readTrafficLight("green")).isEqualTo("GO!");
-  check(readTrafficLight("GREEN")).isEqualTo("GO!");
+skipTest(
+  "readTrafficLight() should print a message according to the different colour passed in",
+  function () {
+    check(readTrafficLight("green")).isEqualTo("GO!");
+    check(readTrafficLight("GREEN")).isEqualTo("GO!");
 
-  check(readTrafficLight("amber")).isEqualTo("GET READY...");
-  check(readTrafficLight("AMBER")).isEqualTo("GET READY...");
+    check(readTrafficLight("amber")).isEqualTo("GET READY...");
+    check(readTrafficLight("AMBER")).isEqualTo("GET READY...");
 
-  check(readTrafficLight("red")).isEqualTo("STOP!");
-  check(readTrafficLight("RED")).isEqualTo("STOP!");
-});
+    check(readTrafficLight("red")).isEqualTo("STOP!");
+    check(readTrafficLight("RED")).isEqualTo("STOP!");
+  }
+);
 
 //Exercise 5
 function howManyArguments() {
@@ -86,12 +97,17 @@ function howManyArguments() {
   // HINT: For this one you should look up 'rest parameters' online - MDN Web Docs and devdocs are excellent sources of JavaScript documentation
 }
 
-skipTest("howManyArguments() returns the number of items passed on a single call", function () {
-  check(howManyArguments("a", "b", "c")).isEqualTo(3);
-  check(howManyArguments()).isEqualTo(0);
-  check(howManyArguments(1, 2, 3, 4, 5)).isEqualTo(5);
-  check(howManyArguments("the", "meaning", "of", "life", "is", 42)).isEqualTo(6);
-});
+skipTest(
+  "howManyArguments() returns the number of items passed on a single call",
+  function () {
+    check(howManyArguments("a", "b", "c")).isEqualTo(3);
+    check(howManyArguments()).isEqualTo(0);
+    check(howManyArguments(1, 2, 3, 4, 5)).isEqualTo(5);
+    check(howManyArguments("the", "meaning", "of", "life", "is", 42)).isEqualTo(
+      6
+    );
+  }
+);
 
 //Exercise 6
 function updateCoinMachine(coinMachine, coin) {
@@ -108,36 +124,46 @@ function updateCoinMachine(coinMachine, coin) {
   */
 }
 
-skipTest("updateCoinMachine() will create a message from an details object", function () {
-  check(updateCoinMachine({ "1p": 0, "2p": 0, "5p": 0, "10p": 0 }, "1p")).isEqualTo({
-    "1p": 1,
-    "2p": 0,
-    "5p": 0,
-    "10p": 0,
-  });
-  check(updateCoinMachine({ "1p": 0, "2p": 0, "5p": 0, "10p": 0 }, "2p")).isEqualTo({
-    "1p": 0,
-    "2p": 1,
-    "5p": 0,
-    "10p": 0,
-  });
-  check(updateCoinMachine({ "1p": 0, "2p": 3, "5p": 0, "10p": 0 }, "2p")).isEqualTo({
-    "1p": 0,
-    "2p": 4,
-    "5p": 0,
-    "10p": 0,
-  });
-  check(updateCoinMachine({ "1p": 0, "2p": 3, "5p": 10, "10p": 0 }, "5p")).isEqualTo({
-    "1p": 0,
-    "2p": 3,
-    "5p": 11,
-    "10p": 0,
-  });
-  check(updateCoinMachine({ "1p": 0, "2p": 3, "5p": 10, "10p": 0 }, "10p")).isEqualTo(
-    { "1p": 0, "2p": 3, "5p": 10, "10p": 1 },
-    "5p"
-  );
-});
+skipTest(
+  "updateCoinMachine() will create a message from an details object",
+  function () {
+    check(
+      updateCoinMachine({ "1p": 0, "2p": 0, "5p": 0, "10p": 0 }, "1p")
+    ).isEqualTo({
+      "1p": 1,
+      "2p": 0,
+      "5p": 0,
+      "10p": 0
+    });
+    check(
+      updateCoinMachine({ "1p": 0, "2p": 0, "5p": 0, "10p": 0 }, "2p")
+    ).isEqualTo({
+      "1p": 0,
+      "2p": 1,
+      "5p": 0,
+      "10p": 0
+    });
+    check(
+      updateCoinMachine({ "1p": 0, "2p": 3, "5p": 0, "10p": 0 }, "2p")
+    ).isEqualTo({
+      "1p": 0,
+      "2p": 4,
+      "5p": 0,
+      "10p": 0
+    });
+    check(
+      updateCoinMachine({ "1p": 0, "2p": 3, "5p": 10, "10p": 0 }, "5p")
+    ).isEqualTo({
+      "1p": 0,
+      "2p": 3,
+      "5p": 11,
+      "10p": 0
+    });
+    check(
+      updateCoinMachine({ "1p": 0, "2p": 3, "5p": 10, "10p": 0 }, "10p")
+    ).isEqualTo({ "1p": 0, "2p": 3, "5p": 10, "10p": 1 }, "5p");
+  }
+);
 
 //Exercise 7
 function updatePosition(coords, direction) {
@@ -163,16 +189,18 @@ function isFalsy(value) {
   // This function should take any value as an argument, and return true if it is falsy, and false otherwise
 }
 
-skipTest("isFalsy() returns true if a value is falsy and false if it is truthy", function () {
-  check(isFalsy(false)).isEqualTo(true);
-  check(isFalsy("")).isEqualTo(true);
-  check(isFalsy(0)).isEqualTo(true);
-  check(isFalsy(NaN)).isEqualTo(true);
-  check(isFalsy(undefined)).isEqualTo(true);
-  check(isFalsy(null)).isEqualTo(true);
-  check(isFalsy(true)).isEqualTo(false);
-});
-
+skipTest(
+  "isFalsy() returns true if a value is falsy and false if it is truthy",
+  function () {
+    check(isFalsy(false)).isEqualTo(true);
+    check(isFalsy("")).isEqualTo(true);
+    check(isFalsy(0)).isEqualTo(true);
+    check(isFalsy(NaN)).isEqualTo(true);
+    check(isFalsy(undefined)).isEqualTo(true);
+    check(isFalsy(null)).isEqualTo(true);
+    check(isFalsy(true)).isEqualTo(false);
+  }
+);
 
 // Exercise 9
 function checkGame(diceRoll, coinToss) {
@@ -191,7 +219,6 @@ skipTest("checkGame() should check if a user was won the game", function () {
   check(checkGame(6, "T")).isEqualTo(false);
 });
 
-
 //Exercise 10
 function addCoins(collection, coin) {
   /*
@@ -206,8 +233,23 @@ function addCoins(collection, coin) {
 skipTest("addCoins() will update the coins in a given slot", function () {
   check(addCoins([[], [], [], []], "1p")).isEqualTo([["1p"], [], [], []]);
   check(addCoins([[], [], [], []], "2p")).isEqualTo([[], ["2p"], [], []]);
-  check(addCoins([[], ["2p"], [], []], "2p")).isEqualTo([[], ["2p", "2p"], [], []]);
+  check(addCoins([[], ["2p"], [], []], "2p")).isEqualTo([
+    [],
+    ["2p", "2p"],
+    [],
+    []
+  ]);
   check(addCoins([[], [], [], []], "5p")).isEqualTo([[], [], ["5p"], []]);
-  check(addCoins([["1p"], [], [], ["10p", "10p"]], "2p")).isEqualTo([["1p"], ["2p"], [], ["10p", "10p"]]);
-  check(addCoins([[], [], ["5p", "5p"], []], "5p")).isEqualTo([[], [], ["5p", "5p", "5p"], []]);
+  check(addCoins([["1p"], [], [], ["10p", "10p"]], "2p")).isEqualTo([
+    ["1p"],
+    ["2p"],
+    [],
+    ["10p", "10p"]
+  ]);
+  check(addCoins([[], [], ["5p", "5p"], []], "5p")).isEqualTo([
+    [],
+    [],
+    ["5p", "5p", "5p"],
+    []
+  ]);
 });
