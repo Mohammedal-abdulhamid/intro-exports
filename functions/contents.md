@@ -1,5 +1,20 @@
 # Functions
 
-For this topic, you should work on the tasks in the `solo-katas` until you are informed to join with your assigned pair and start working together on the `paired-katas` tasks.
+Please work through the listed sections in numerical order 🔢
 
-You should work on the sections in numerical order. In each section, instructions are provided in a comment at the top of each file. Please read these instructions carefully! This is important for you to understand what you are being asked to do and how to approach the problems of that section.
+## Core Tasks
+
+For `section-1` and `section-2`, please work through the files in the order:
+
+1. `exercises.js`
+2. `challenges.js`
+
+## Advanced
+
+For the `section-3-advanced` tasks, please work through them in the order:
+
+1. `find-total-of-multiples.js`
+2. `count-printer-errors.js`
+3. `rectangle.js`
+4. `get-ordinal-suffix.js`
+5. `contains-no-repeats.js`
