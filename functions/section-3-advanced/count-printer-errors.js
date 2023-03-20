@@ -1,4 +1,4 @@
-const { check, runTest } = require('../../test-api/index.js');
+const { check, runTest } = require("../../test-api/index.js");
 
 /*
 In a factory a printer prints labels for boxes. For one kind of boxes the printer has to use colors which are named with letters from a to m.
@@ -22,27 +22,32 @@ countPrinterErrors(control) should return "8/22"
 
  */
 
-function countPrinterErrors() {}
+function countPrinterErrors() {
+  // your solution here
+}
 
-runTest('countPrinterErrors() should return a string', function () {
-  check(typeof countPrinterErrors('')).isEqualTo('string');
+runTest("countPrinterErrors() should return a string", function () {
+  check(typeof countPrinterErrors("")).isEqualTo("string");
 });
+
 runTest(
-  'countPrinterErrors() should return zero for an empty control string',
+  "countPrinterErrors() should return zero for an empty control string",
   function () {
-    check(countPrinterErrors('')).isEqualTo('0/0');
+    check(countPrinterErrors("")).isEqualTo("0/0");
   }
 );
+
 runTest(
-  'countPrinterErrors() should return correct control string length',
+  "countPrinterErrors() should return correct control string length",
   function () {
-    check(countPrinterErrors('aaa')).isEqualTo('0/3');
+    check(countPrinterErrors("aaa")).isEqualTo("0/3");
   }
 );
+
 runTest(
-  'countPrinterErrors() should correctly count errors in control string',
+  "countPrinterErrors() should correctly count errors in control string",
   function () {
-    check(countPrinterErrors('aaz')).isEqualTo('1/3');
-    check(countPrinterErrors('aaaxbbbbyyhwawiwjjjwwm')).isEqualTo('8/22');
+    check(countPrinterErrors("aaz")).isEqualTo("1/3");
+    check(countPrinterErrors("aaaxbbbbyyhwawiwjjjwwm")).isEqualTo("8/22");
   }
 );
