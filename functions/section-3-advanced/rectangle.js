@@ -13,3 +13,5 @@ Try to complete this task without using for loops!
 */
 
 function makeRectangle() {}
+
+// invoke the function below to test it
