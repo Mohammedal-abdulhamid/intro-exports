@@ -47,7 +47,7 @@ skipTest(
 
 // Exercise 3
 function getFirstNItems(arr, n) {
-  // This function should take two arguments, an array and a number n, and return a new array containing the first n items of the given array
+  // This function should take two arguments, an array and a number 'n', and return a new array containing the first 'n' items of the given array
 }
 
 skipTest("getFirstNItems() returns the first n items in an array", function () {
@@ -77,8 +77,8 @@ skipTest(
 );
 
 // Exercise 5
-function moveItemToEnd(arr, n) {
-  // This function should take two arguments, an array and a number n, and return a new array where the item that was previously at index 'n' is now at the end of the array
+function moveItemToEnd(arr, index) {
+  // This function should take two arguments, an array and an index value, and should return a new array where the item that was previously at the given index is now at the end of the array
 }
 
 skipTest(
