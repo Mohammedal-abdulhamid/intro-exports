@@ -227,6 +227,6 @@ skipTest("collectStrings() can get all the strings from an array", function () {
 
 /******* Refactor Bonus Challenge *******
 
-1. Question 5 - complete this problem without resorting to if statements!
+1. Exercise 5 - complete this problem without resorting to if statements!
 2. Refactor every function into an ES6 arrow function () => {}
 */
