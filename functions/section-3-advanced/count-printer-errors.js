@@ -5,13 +5,13 @@ In a factory a printer prints labels for boxes. For one kind of boxes the printe
 
 The colours used by the printer are recorded in a string. 
 
-For example a "good" control string would be aaabbbbhaijjjm meaning that the printer used colour 'a' three times , colour 'b' four times , colour 'h' one time  then one time colour a...
+For example a "good" control string would be aaabbbbhaijjjm meaning: that the printer used colour 'a' three times , colour 'b' four times , colour 'h' one time and so on.
 
 Sometimes there are problems and a "bad" control string is produced e.g. aaaxbbbbyyhwawiwjjjwwm with letters not from a to m.
 
 Write a function named countPrinterErrors which given a string will return the error rate of the printer.
 
-You should return a string representing a rational whose numerator is the number of errors and the denominator the length of the control string. 
+You should return a string representing a fraction whose numerator is the number of errors and the denominator the length of the control string. 
 
 Example:
 const control = "aaabbbbhaijjjm"
