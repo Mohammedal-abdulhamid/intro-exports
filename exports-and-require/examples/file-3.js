@@ -3,3 +3,4 @@ function printHello() {
 }
 
 module.exports = printHello;
+printHello()
